@@ -22,7 +22,7 @@ tape('StudentPUT', async function (t) {
   jsonist.put(url, dataInput, (err, data,res) => {
 
     if (err) t.error(err)
-    t.ok(res, 'should have successful Student PUT')
+    t.ok(res, ' Student PUT Data')
     t.end()
   })
 })
@@ -34,7 +34,7 @@ tape('StudentGET', async function (t) {
     if (err) {
       t.error(err)
     } else {
-      t.isEquivalent(data, dataInput, 'should return the data which was set')
+      t.isEquivalent(data, dataInput, 'Student GET Data')
     }
     t.end()
   })
@@ -45,7 +45,7 @@ tape('StudentDELETE', async function (t) {
   jsonist.delete(url,  (err, data) => {
   
     if (err) t.error(err)
-    t.ok(data, 'should have successful Student PUT')
+    t.ok(data, 'Student Delete Data')
     t.end()
   })
 })
